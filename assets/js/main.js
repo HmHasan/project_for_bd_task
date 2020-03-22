@@ -19,15 +19,21 @@ $(document).ready(function(){
 	$("#email").focusout(function(){
 		var email=$("#email").val();
 		var patarn=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-		if(email.match(patarn))
+		if(email.length<1)
 			{
-				return true;
+				$("#w_email").removeClass('d-none');
+				$("#w_email").text('Email Required');
+			}
+		else if(email.match(patarn))
+			{
+				$("#w_email").removeClass('d-none');
+				$("#w_email").text('Your Email not valid format');
 			}
 		
 		else
 			{
 				$("#w_email").removeClass('d-none');
-				$("#w_email").text('Your Email not valid format')
+				$("#w_email").text('Your Email not valid format');
 			}
 	});
 	

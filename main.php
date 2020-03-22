@@ -129,6 +129,12 @@ if(isset($_POST['submit']) && $_SERVER['REQUEST_METHOD']=='POST')
 <body>
     <div class="container mt-5">
         <div class="text-center">
+<!--
+			<div class="text-right"><?php date_default_timezone_set('Asia/Dhaka'); echo date('h:i:s:A');?></div>
+			<div class="text-right"><?php date_default_timezone_set('Asia/Dhaka'); echo date('m:d:y');?></div>
+
+-->
+			<div style="text-align:center;padding:1em 0;"> <h4><p style="text-decoration:none;" href="https://www.zeitverschiebung.net/en/timezone/asia--dhaka"><span style="color:gray;">Current local time in</span><br />Asia/Dhaka</p></h4> <iframe src="https://www.zeitverschiebung.net/clock-widget-iframe-v2?language=en&size=small&timezone=Asia%2FDhaka" width="100%" height="90" frameborder="0" seamless></iframe> </div>
             <h2 class="display-4">Stay Closer With Us</h2>
             <small class="text-danger">Please Enter Your Information Correctly</small>
         </div>
